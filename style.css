@@ -1,0 +1,121 @@
+@mixin cercle ($size, $color,$shadow) {
+    background : transparent;
+    border-radius : 50%;
+    height : $size;
+    width :$size;
+    border : 5px solid $color;
+    box-shadow: inset 2px 2px $shadow, 2px 2px $shadow;
+}
+
+.flex{
+    display: flex;
+    align-items : center;
+}
+
+.orange {
+@include cercle (40px, orangered, orange);
+}
+
+.yellow{
+@include cercle (160px, yellow, orange);
+}
+
+$size : 25px;
+$color : grey;
+$shadow : black;
+@for $i from 1 through 6 {
+$size : $size + 12px;
+    .chaine:nth-child(#{$i}) {
+    @include cercle($size,$color,$shadow);
+        margin:-10px;
+        display: inline-block;
+    }
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.orange {
+    background: transparent;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: 5px solid orangered;
+    box-shadow: inset 2px 2px orange, 2px 2px orange;
+}
+
+.yellow {
+    background: transparent;
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    border: 5px solid yellow;
+    box-shadow: inset 2px 2px orange, 2px 2px orange;
+}
+
+.chaine:nth-child(1) {
+    background: transparent;
+    border-radius: 50%;
+    height: 37px;
+    width: 37px;
+    border: 5px solid grey;
+    box-shadow: inset 2px 2px black, 2px 2px black;
+    margin: -10px;
+    display: inline-block;
+}
+
+.chaine:nth-child(2) {
+    background: transparent;
+    border-radius: 50%;
+    height: 49px;
+    width: 49px;
+    border: 5px solid grey;
+    box-shadow: inset 2px 2px black, 2px 2px black;
+    margin: -10px;
+    display: inline-block;
+}
+
+.chaine:nth-child(3) {
+    background: transparent;
+    border-radius: 50%;
+    height: 61px;
+    width: 61px;
+    border: 5px solid grey;
+    box-shadow: inset 2px 2px black, 2px 2px black;
+    margin: -10px;
+    display: inline-block;
+}
+
+.chaine:nth-child(4) {
+    background: transparent;
+    border-radius: 50%;
+    height: 73px;
+    width: 73px;
+    border: 5px solid grey;
+    box-shadow: inset 2px 2px black, 2px 2px black;
+    margin: -10px;
+    display: inline-block;
+}
+
+.chaine:nth-child(5) {
+    background: transparent;
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    border: 5px solid grey;
+    box-shadow: inset 2px 2px black, 2px 2px black;
+    margin: -10px;
+    display: inline-block;
+}
+
+.chaine:nth-child(6) {
+    background: transparent;
+    border-radius: 50%;
+    height: 97px;
+    width: 97px;
+    border: 5px solid grey;
+    box-shadow: inset 2px 2px black, 2px 2px black;
+    margin: -10px;
+    display: inline-block;
+}
